@@ -1,0 +1,42 @@
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.user-form-input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.user-form-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.user-form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.user-form-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  color: #ffffff;
+  background: #2563eb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.user-form-btn:hover {
+  opacity: 0.9;
+}
+
+.user-form-btn-cancel {
+  background: #6b7280;
+}
