@@ -1,6 +1,16 @@
 import "./Userlist.css";
 
 function UserList({ users, onEdit, onDelete }) {
+
+    const handleDelete = (user) => {
+    const sure = window.confirm(
+      `Are you sure you want to delete "${user.name}"?`
+    );
+    if (sure) {
+      onDelete(user.id);
+    }
+  };
+
   if (users.length === 0) {
     return <p className="user-list-empty">No records yet. Add one above.</p>;
   }
@@ -22,7 +32,7 @@ function UserList({ users, onEdit, onDelete }) {
             </button>
             <button
               className="user-btn user-btn-delete"
-              onClick={() => onDelete(user.id)}
+              onClick={() => handleDelete(user)}
             >
               Delete
             </button>
